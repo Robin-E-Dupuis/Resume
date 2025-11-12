@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robin's Web Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1, h3, h4, h5 {
+            color: #2c3e50;
+            margin: 20px 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+   
+            padding-bottom: 10px;
+        }
+        
+        nav {
+            margin: 20px 0;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        article {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            background-color: white;
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        }
+        
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            margin: 30px 0;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .card {
+            min-width: 100%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .card p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .issuer {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .issuer i {
+            margin-right: 10px;
+            color: #4a6ee0;
+        }
+        
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .nav-btn:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .prev {
+            left: 20px;
+        }
+        
+        .next {
+            right: 20px;
+        }
+        
+        .indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            margin: 0 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: #3498db;
+            transform: scale(1.2);
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                padding: 20px;
+            }
+            
+            .card h2 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body align="center">
+    <h1>Robin's Resume</h1>
+    <nav>
+        <a href="https://share.google/FnRr6YauPGyVXyQ0B" target="_blank">
+            <button>YouTube</button>
+        </a>
+    </nav>
+
+    <a title="Send Me An Email" href="mailto:dupuisrobin2@gmail.com">
+        <img src="gmail-removebg-preview.png" style="height: 100px; width:auto;">
+    </a>
+
+    <br><br>
+    
+    <h3>Education</h3>
+    <article>
+        Associate Degree Application Software Development obtained May 2025 with a 3.375 GPA.
+        Made it on the dean's list.
+        <br><br>
+        Currently pursuing Informatics bachelor with a Cybersecurity concentration.
+    </article>
+    
+    <br><br>
+    
+    <h4>Certifications</h4>
+    
+    <!-- Certification Carousel -->
+    <div class="carousel-container">
+        <button class="nav-btn prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="carousel">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-icon" style="background: linear-gradient(135deg, #4a6ee0, #6a11cb);">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h2>PCEP - Certified Entry Level Programmer</h2>
+                <p>Demonstrates proficiency in Python programming fundamentals, including data types, control structures, functions, and modules.</p>
+                <div class="issuer">
+                    <i class="fas fa-award"></i>
+                    <span>Issued by Python Institute</span>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-icon" style="background: linear-gradient(135deg, #4285F4, #34A853);">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h2>Google Cybersecurity</h2>
+                <p>Comprehensive training in cybersecurity principles, tools, and best practices to protect systems and data from threats.</p>
+                <div class="issuer">
+                    <i class="fas fa-award"></i>
+                    <span>Issued by Coursera</span>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-icon" style="background: linear-gradient(135deg, #FF9900, #FF6B00);">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h2>AWS Cloud Solutions Architect</h2>
+                <p>Expertise in designing distributed systems on AWS, including compute, storage, database, and networking services.</p>
+                <div class="issuer">
+                    <i class="fas fa-award"></i>
+                    <span>Issued by Coursera</span>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-icon" style="background: linear-gradient(135deg, #0a0a23, #2a2a40);">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h2>Responsive Web Design</h2>
+                <p>Skills in creating websites that work seamlessly across all devices using HTML, CSS, and responsive design principles.</p>
+                <div class="issuer">
+                    <i class="fas fa-award"></i>
+                    <span>Issued by freeCodeCamp</span>
+                </div>
+            </div>
+        </div>
+        
+        <button class="nav-btn next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+    
+    <div class="indicators">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+        <div class="indicator"></div>
+    </div>
+    
+    <br><br>
+    
+    <h5>Skills</h5>
+    <ul>
+        <li>Java</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Javascript</li>
+        <li>MySQL</li>
+        <li>PhpMyAdmin</li>
+        <li>JSF</li>
+        <li>Data Structures</li>
+        <li>Cybersecurity</li>
+        <li>Information Technology</li>
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel');
+            const cards = document.querySelectorAll('.card');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            let currentIndex = 0;
+            
+            // Set initial position
+            updateCarousel();
+            
+            // Next button event
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % cards.length;
+                updateCarousel();
+            });
+            
+            // Previous button event
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                updateCarousel();
+            });
+            
+            // Indicator click events
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+            
+            // Auto-advance carousel every 5 seconds
+            setInterval(function() {
+                currentIndex = (currentIndex + 1) % cards.length;
+                updateCarousel();
+            }, 5000);
+            
+            // Update carousel position and active indicator
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update active indicator
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+        });
+    </script>
+</body>
+</html>
